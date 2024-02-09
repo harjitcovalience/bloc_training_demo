@@ -17,6 +17,13 @@ class HomeScreen extends StatelessWidget {
                         backgroundColor: Colors.green,
                     )
                   );
+                } else if (state is InternetLostState){
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text("Internet not connected"),
+                        backgroundColor: Colors.red,
+                      )
+                  );
                 }
               },
               builder: (context, state) {
